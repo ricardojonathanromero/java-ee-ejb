@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'mx.com.hiringa.sga'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('javax:javaee-api:8.0.1')
+    implementation('org.hibernate.orm:hibernate-core:6.1.3.Final')
+    implementation('javax.persistence:javax.persistence-api:2.2')
+    implementation('org.postgresql:postgresql:42.5.0')
+    implementation('org.apache.logging.log4j:log4j-api:2.18.0')
+    implementation('org.apache.logging.log4j:log4j-core:2.18.0')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
