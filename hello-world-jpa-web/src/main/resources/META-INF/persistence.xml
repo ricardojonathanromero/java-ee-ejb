@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="PersonPU">
+        <class>mx.com.hiringa.sga.model.Person</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgres://localhost:5432/postgres"/>
+        </properties>
+    </persistence-unit>
+</persistence>
