@@ -28,3 +28,5 @@ sga-jee/target/
 sga-jee-web/out/
 
 .metadata/
+
+.DS_Store
