@@ -1,12 +1,15 @@
-package mx.com.hiringa.sga.domain.entities;
+package mx.com.hiringa.jpa.domain.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "persons")
-public class Person {
+public class Person implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)

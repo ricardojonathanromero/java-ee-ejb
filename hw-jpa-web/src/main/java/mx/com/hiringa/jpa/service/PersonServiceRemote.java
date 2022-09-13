@@ -1,6 +1,6 @@
-package mx.com.hiringa.sga.service;
+package mx.com.hiringa.jpa.service;
 
-import mx.com.hiringa.sga.domain.entities.Person;
+import mx.com.hiringa.jpa.domain.entities.Person;
 
 import javax.ejb.Remote;
 import java.util.List;

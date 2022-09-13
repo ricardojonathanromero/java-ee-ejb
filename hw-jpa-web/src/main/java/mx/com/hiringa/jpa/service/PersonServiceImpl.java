@@ -1,7 +1,7 @@
-package mx.com.hiringa.sga.service;
+package mx.com.hiringa.jpa.service;
 
-import mx.com.hiringa.sga.domain.entities.Person;
-import mx.com.hiringa.sga.repository.PersonRepository;
+import mx.com.hiringa.jpa.domain.entities.Person;
+import mx.com.hiringa.jpa.repository.PersonRepository;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -13,9 +13,7 @@ public class PersonServiceImpl implements PersonServiceRemote, PersonService {
     private PersonRepository repo;
 
     @Override
-    public List<Person> ListPersons() {
-        return repo.findAll();
-    }
+    public List<Person> ListPersons() { return repo.findAll(); }
 
     @Override
     public Person FindPersonById(Person person) {
