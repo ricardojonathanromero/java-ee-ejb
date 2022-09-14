@@ -4,6 +4,19 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
     <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
-
+        <class>mx.com.hiringa.sga.jpql.domain.Person</class>
+        <class>mx.com.hiringa.sga.jpql.domain.User</class>
+        <properties>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.PostgresPlusDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.generate_statistics" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+            <property name="javax.persistence.jdbc.user" value="rjromero"/>
+            <property name="javax.persistence.jdbc.password" value="qgOBzj1xViJMX7Uba3UC"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        </properties>
     </persistence-unit>
 </persistence>
