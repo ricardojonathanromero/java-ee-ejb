@@ -30,3 +30,4 @@ sga-jee-web/out/
 .metadata/
 
 .DS_Store
+associations/associations.iml

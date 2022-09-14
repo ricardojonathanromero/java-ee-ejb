@@ -24,12 +24,12 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${persons}" var="p" >
+            <c:forEach items="${persons}" var="person" >
                 <tr>
-                    <th>${p.id}</th>
-                    <td>${p.name} ${p.lastName}</td>
-                    <td>${p.email}</td>
-                    <td>${p.phone}</td>
+                    <th>${person.id}</th>
+                    <td>${person.name} ${person.lastName}</td>
+                    <td>${person.email}</td>
+                    <td>${person.phone}</td>
                 </tr>
             </c:forEach>
             </tbody>

@@ -1,7 +1,7 @@
-package mx.com.hiringa.jpa.handler;
+package mx.com.hiringa.sga.handler;
 
-import mx.com.hiringa.jpa.domain.entities.Person;
-import mx.com.hiringa.jpa.service.PersonService;
+import mx.com.hiringa.sga.domain.Person;
+import mx.com.hiringa.sga.service.PersonService;
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "persons", value = "/persons", description = "persons service")
+@WebServlet(name = "persons", value = "/persons")
 public class PersonServlet extends HttpServlet {
     @Inject
     PersonService personService;

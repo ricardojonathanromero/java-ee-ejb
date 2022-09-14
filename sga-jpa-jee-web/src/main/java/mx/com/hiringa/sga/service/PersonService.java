@@ -1,6 +1,6 @@
-package mx.com.hiringa.jpa.service;
+package mx.com.hiringa.sga.service;
 
-import mx.com.hiringa.jpa.domain.entities.Person;
+import mx.com.hiringa.sga.domain.Person;
 
 import javax.ejb.Local;
 import java.util.List;

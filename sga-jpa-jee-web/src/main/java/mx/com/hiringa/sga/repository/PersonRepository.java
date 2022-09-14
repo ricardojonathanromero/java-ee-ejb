@@ -1,6 +1,6 @@
-package mx.com.hiringa.jpa.repository;
+package mx.com.hiringa.sga.repository;
 
-import mx.com.hiringa.jpa.domain.entities.Person;
+import mx.com.hiringa.sga.domain.Person;
 
 import java.util.List;
 

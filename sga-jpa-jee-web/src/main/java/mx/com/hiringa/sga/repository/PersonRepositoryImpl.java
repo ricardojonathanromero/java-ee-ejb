@@ -1,6 +1,6 @@
-package mx.com.hiringa.jpa.repository;
+package mx.com.hiringa.sga.repository;
 
-import mx.com.hiringa.jpa.domain.entities.Person;
+import mx.com.hiringa.sga.domain.Person;
 import org.jetbrains.annotations.NotNull;
 
 import javax.ejb.Stateless;
@@ -10,19 +10,14 @@ import java.util.List;
 
 @Stateless
 public class PersonRepositoryImpl implements PersonRepository {
-    @PersistenceContext(name = "PersonPU")
+    @PersistenceContext(name = "persistence")
     EntityManager em;
 
     @Override
-    public List<Person> findAll() {
-        System.out.println("************ Start findAll() function ***********");
-        return (List<Person>) em.createNamedQuery("FindAllPersons").getResultList();
-    }
+    public List<Person> findAll() { return em.createNamedQuery("FindAllPersons").getResultList(); }
 
     @Override
-    public Person findPersonById(@NotNull Person person) {
-        return em.find(Person.class, person.getId());
-    }
+    public Person findPersonById(@NotNull Person person) { return em.find(Person.class, person.getId()); }
 
     @Override
     public Person findPersonByEmail(@NotNull Person person) {

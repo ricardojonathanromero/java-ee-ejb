@@ -4,14 +4,14 @@ plugins {
 }
 
 group 'mx.com.hiringa.sga'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 repositories {
     mavenCentral()
 }
 
 ext {
-    junitVersion = '5.8.1'
+    junitVersion = '5.9.0'
 }
 
 sourceCompatibility = '1.8'
@@ -22,15 +22,14 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    compileOnly('jakarta.validation:jakarta.validation-api:3.0.0')
-    compileOnly('jakarta.enterprise:jakarta.enterprise.cdi-api:3.0.0')
-    compileOnly('jakarta.ejb:jakarta.ejb-api:4.0.0')
-    compileOnly('jakarta.json.bind:jakarta.json.bind-api:2.0.0')
-    compileOnly('jakarta.json:jakarta.json-api:2.0.1')
-    compileOnly('jakarta.persistence:jakarta.persistence-api:3.0.0')
-    compileOnly('jakarta.ws.rs:jakarta.ws.rs-api:3.0.0')
-    compileOnly('jakarta.servlet:jakarta.servlet-api:5.0.0')
-    compileOnly('jakarta.transaction:jakarta.transaction-api:2.0.0')
+    compileOnly('javax:javaee-api:8.0.1')
+    compileOnly('org.hibernate.orm:hibernate-core:6.1.3.Final')
+
+    implementation('org.jetbrains:annotations:23.0.0')
+    implementation('javax.persistence:javax.persistence-api:2.2')
+    implementation('org.postgresql:postgresql:42.5.0')
+    implementation('org.apache.logging.log4j:log4j-api:2.18.0')
+    implementation('org.apache.logging.log4j:log4j-core:2.18.0')
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
