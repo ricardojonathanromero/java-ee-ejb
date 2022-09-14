@@ -15,10 +15,11 @@ import java.util.List;
 public class JPQL {
     static final Logger log = LogManager.getRootLogger();
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         String jpql = null;
         Object[] tuple = null;
-        Iterator items = null;
+        Iterator<Object> items = null;
         List<Person> people = null;
         List<User> users = null;
         Person person = null;
