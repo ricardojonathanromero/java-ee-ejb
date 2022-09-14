@@ -23,7 +23,7 @@ public class Person implements Serializable {
     @Column(name = "name", nullable = false, length = 50)
     private String name;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false, length = 50)
     private String lastName;
 
     @Column(name = "email", length = 100)
@@ -33,6 +33,8 @@ public class Person implements Serializable {
     private String phone;
 
     public Person() {}
+
+    public Person(Integer id) { this.id = id; }
 
     public Person(String name, String lastName, String email, String phone) {
         this.name = name;

@@ -12,7 +12,6 @@ import java.util.List;
 
 @Stateless
 public class PersonServiceImpl implements PersonServiceRemote, PersonService {
-
     @Inject
     PersonDao repo;
 
@@ -23,9 +22,7 @@ public class PersonServiceImpl implements PersonServiceRemote, PersonService {
     public List<Person> ListPersons() { return repo.findAll(); }
 
     @Override
-    public Person FindPersonById(Person person) {
-        return repo.findPersonById(person);
-    }
+    public Person FindPersonById(Person person) { return repo.findPersonById(person); }
 
     @Override
     public Person FindPersonByEmail(Person person) {

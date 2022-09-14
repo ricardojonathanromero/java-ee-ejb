@@ -64,6 +64,13 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-ejb-client-bom</artifactId>
+            <type>pom</type>
+            <scope>compile</scope>
+            <version>26.1.2.Final</version>
+       </dependency>
     </dependencies>
     <build>
         <finalName>transactions-jpa</finalName>

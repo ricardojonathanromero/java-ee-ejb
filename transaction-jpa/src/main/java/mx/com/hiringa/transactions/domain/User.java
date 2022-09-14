@@ -2,6 +2,9 @@ package mx.com.hiringa.transactions.domain;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -26,7 +29,7 @@ public class User implements Serializable {
     private String username;
 
     @NotNull
-    @Column(name = "password")
+    @Column(name = "password", nullable = false, length = 50)
     private String password;
 
     @ManyToOne(fetch = FetchType.LAZY)
