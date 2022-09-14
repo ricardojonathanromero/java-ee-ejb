@@ -4,7 +4,7 @@ import mx.com.hiringa.transactions.domain.Person;
 
 import java.util.List;
 
-public interface PersonRepository {
+public interface PersonDao {
     List<Person> findAll();
     Person findPersonById(Person person);
     Person findPersonByEmail(Person person);

@@ -1,7 +1,7 @@
 package mx.com.hiringa.transactions.service;
 
 import mx.com.hiringa.transactions.domain.Person;
-import mx.com.hiringa.transactions.dao.PersonRepository;
+import mx.com.hiringa.transactions.dao.PersonDao;
 
 import javax.annotation.Resource;
 import javax.ejb.SessionContext;
@@ -14,7 +14,7 @@ import java.util.List;
 public class PersonServiceImpl implements PersonServiceRemote, PersonService {
 
     @Inject
-    PersonRepository repo;
+    PersonDao repo;
 
     @Resource
     private SessionContext context;

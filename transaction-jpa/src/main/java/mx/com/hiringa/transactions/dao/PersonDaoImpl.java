@@ -10,7 +10,7 @@ import java.util.List;
 
 @SuppressWarnings("unchecked")
 @Stateless
-public class PersonRepositoryImpl implements PersonRepository {
+public class PersonDaoImpl implements PersonDao {
     @PersistenceContext(name = "persistence")
     EntityManager em;
 

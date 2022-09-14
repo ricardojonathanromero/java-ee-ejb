@@ -26,7 +26,7 @@ public class User implements Serializable {
     private String username;
 
     @NotNull
-    @Column(name = "password", nullable = false, length = 50)
+    @Column(name = "password")
     private String password;
 
     @ManyToOne(fetch = FetchType.LAZY)
