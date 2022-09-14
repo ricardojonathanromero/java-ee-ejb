@@ -3,8 +3,6 @@ package mx.com.hiringa.transactions.domain;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 import java.io.Serializable;
 import java.util.Objects;
 
